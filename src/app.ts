@@ -2,6 +2,7 @@ import express from 'express';
 
 const app = express();
 
+
 app.get('/', (_request, response) => {
   const version = process.env.APP_VERSION ?? 'development';
 
@@ -9,6 +10,7 @@ app.get('/', (_request, response) => {
     <h1>CI/CD Lab</h1>
     <p>The application is running.</p>
     <p>Version ${version}</p>
+    <p>Verified by GitHub Actions. Deployed on Render.</p>
   `);
 });
 
